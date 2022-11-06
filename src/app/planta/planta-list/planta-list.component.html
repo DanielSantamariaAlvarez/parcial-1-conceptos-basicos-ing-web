@@ -1,3 +1,30 @@
-<p>
-  planta-list works!
-</p>
+<div class="row py-3">
+  <div class="col-md-8">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre Común</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Clima</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="rowPlanta" *ngFor="let planta of plantas">
+          <th scope="row">{{planta.id}}</th>
+          <td>{{planta.nombre_comun}}</td>
+          <td>{{planta.tipo}}</td>
+          <td>{{planta.clima}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    Total plantas de interior: {{actualizarPlantasInterior()}}
+  </div>
+  <div class="col-md-8">
+    Total plantas de exterior: {{actualizarPlantasExterior()}}
+  </div>
+</div>
